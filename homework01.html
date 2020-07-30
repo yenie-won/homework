@@ -1,0 +1,134 @@
+
+<html lang="ko">
+<head>
+    <!-- Webpage Title -->
+    <title>경복궁 야간 투어</title>
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+
+    <!-- 구글폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+
+
+    <style type="text/css">
+        * {
+            font-family: 'Nanum Myeongjo', serif;
+        }
+
+
+        .wrap {
+            width: 700px;
+            margin: auto;
+        }
+
+        .img {
+            background-image: url('https://korean.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=19021&fileTy=MEDIA&fileNo=1&thumbTy=L');
+            background-size: cover;
+            background-position: center;
+            width: 700px;
+            height: 500px;
+        }
+
+        .info {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1, h5 {
+            display: inline;
+        }
+
+        .order {
+            text-align: center;
+        }
+
+        .orders {
+            margin-top: 100px;
+        }
+
+    </style>
+    <script>
+        function order() {
+            alert('주문이 완료되었습니다.');
+        }
+
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <div class="img" class="info"></div>
+    <div class="info">
+        <h1>가이드와 함께 하는 경복궁 야간 투어</h1>
+        <p><h5>가격: 5만원/인</h5></p>
+        <p>전문 가이드가 편안하게 들려주는 한 여름밤의 경복궁 이야기. 경복궁의 아름다움을 느낄 수 있는 특별한 경험을 선사합니다.</p>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">예약자명</span>
+            </div>
+            <input type="text" class="form-control" id="order-name">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text">예약수량</label>
+            </div>
+            <select class="custom-select" id="order-count">
+                <option selected value=""> - 인원 수 선택 -</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">투어날짜</span>
+            </div>
+            <input type="text" class="form-control" id="order-address">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">전화번호</span>
+            </div>
+            <input type="text" class="form-control" id="order-phone">
+        </div>
+        <div class="order">
+            <button onclick="order()" type="button" class="btn btn-primary">주문하기</button>
+        </div>
+    </div>
+    <div class="orders">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">예약자명</th>
+                <th scope="col">예약수량</th>
+                <th scope="col">투어날짜</th>
+                <th scope="col">전화번호</th>
+            </tr>
+            </thead>
+            <tbody id="orders-box">
+            <tr>
+                <td>박르탄</td>
+                <td>3</td>
+                <td>2020년 8월 3일 20-22시</td>
+                <td>010-1234-5678</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
